@@ -14,6 +14,13 @@
       <h1>Mitch Fischer</h1>
       <h2>Instructor &amp; Web-Developer</h2>
     </div>
+
+    <ul id="navbar">
+      <li class="nav-item"><%= link_to("About", "/about") %></li>
+      <li class="nav-item"><%= link_to("Portfolio", "/portfolio") %></li>
+      <li class="nav-item"><%= link_to("Contact", "/contact") %></li>
+    </ul>
+
     <%= yield %>
   </body>
 </html>
