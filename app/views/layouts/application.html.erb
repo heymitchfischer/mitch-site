@@ -193,13 +193,47 @@
       </div>
     </section>
 
-    <!-- Map -->
-    <section id="contact" class="map">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-      <br />
-      <small>
-        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-      </small>
+    <!-- Contact -->
+    <section id="contact">
+      <div id="message-form" class="container">
+        <h1>Contact Us</h1>
+        <%= form_tag("/contact", novalidate: true, class: "needs-validation") do %>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="name">Name*</label>
+                <input type="text" name="name" id="name" class="form-control required-field" placeholder="Required" required>
+                <div class="invalid-feedback">
+                  Name is required.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="text" name="email" id="email" class="form-control required-field" placeholder="Required" required>
+                <div class="invalid-feedback">
+                  Email is required.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="number">Number</label>
+                <input type="text" name="number" id="number" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="content">Message*</label>
+                <textarea name="content" id="content" class="form-control required-field" style="height: 240px" placeholder="Required" required></textarea>
+                <div class="invalid-feedback">
+                  Message is required.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <input type="submit" value="Send Message" class="btn btn-primary" id="contact-button">
+          </div>
+        <% end %>
+      </div>
     </section>
 
     <!-- Footer -->
